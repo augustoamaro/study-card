@@ -1,13 +1,13 @@
 import styles from '../styles/components/card.module.scss';
 
-const Card = () => {
+const Card = ({ title, description }) => {
     return (
         <div className={styles["card"]}>
-            <h4>Valores e Variáveis</h4>
 
-            <h2>Introdução a tipos primitivos</h2>
-            <h2>var, let e const</h2>
-            <h2>Operador unário</h2>
+            <h4>{title}</h4>
+
+            <p>{description}</p>
+
         </div>
     )
 }

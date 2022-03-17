@@ -2,6 +2,14 @@ import Card from '../components/Card';
 
 import styles from "../styles/pages/main.module.scss"
 
+const cardValues = [
+    { title: 'Valores e variáveis', description: 'Introdução a tipos primitivos' },
+    { title: 'Valores e variáveis', description: 'Introdução a tipos primitivos' },
+    { title: 'Valores e variáveis', description: 'Introdução a tipos primitivos' },
+    { title: 'Valores e variáveis', description: 'Introdução a tipos primitivos' },
+]
+
+
 const Main = () => {
     const todayYear = new Date().getFullYear();
     const age = todayYear - 1992;
@@ -25,7 +33,10 @@ const Main = () => {
             </div>
 
             <div className={styles["card-container"]}>
-                <Card />
+                {cardValues.map((cardValue, index) => {
+                    return <Card key={index} title={cardValue.title} description={cardValue.description} />
+                })}
+
             </div>
         </div>
     )
